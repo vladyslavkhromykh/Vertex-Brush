@@ -3,7 +3,17 @@
   <component name="ContentModelStore">
     <e p="C:\Users\hromy\.Rider2019.2\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\hromy\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_vertex-group.1346089441.00" t="ExcludeRecursive" />
-    <e p="C:\Users\hromy\Desktop\It\Projects\vertex-group" t="IncludeFlat">
+    <e p="C:\Users\hromy\Desktop\It\Projects\vertex-group" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Scripts" t="Include">
+          <e p="Painter.cs" t="Include" />
+          <e p="Settings.cs" t="Include" />
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
       <e p="vertex-group.sln" t="IncludeFlat" />
     </e>
   </component>
