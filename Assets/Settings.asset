@@ -12,10 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5aaba8165de476439c752d59427c8cd, type: 3}
   m_Name: Settings
   m_EditorClassIdentifier: 
-  defaultColor:
-    serializedVersion: 2
-    rgba: 4294967295
   paintColor:
     serializedVersion: 2
     rgba: 4294945536
-  rotationSpeed: 0
+  rotationSpeed: 5

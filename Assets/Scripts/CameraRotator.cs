@@ -1,16 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 /// <summary>
-/// Simple rotator controller for orbit camera rotation.
+/// Simple rotation controller for orbit camera rotation.
 /// </summary>
 public class CameraRotator : MonoBehaviour
 {
+    public Settings settings;
     [SerializeField]
     private Transform center;
-    [SerializeField]
-    private float rotationSpeed;
     private Transform transform;
 
     private void Awake()
@@ -26,9 +23,12 @@ public class CameraRotator : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Rotates camera with speed value around defined center.
+    /// </summary>
     private void Rotate()
     {
-        float speed = rotationSpeed * Input.GetAxis("Mouse X");
+        float speed = settings.rotationSpeed * Input.GetAxis("Mouse X");
         this.transform.RotateAround(center.position, Vector3.up, speed);
     }
 }

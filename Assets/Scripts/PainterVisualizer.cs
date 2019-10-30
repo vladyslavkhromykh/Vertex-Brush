@@ -1,6 +1,8 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
+/// <summary>
+/// Controller that serves as a visualizer for painting brush.
+/// </summary>
 public class PainterVisualizer : MonoBehaviour
 {
     [SerializeField]
@@ -15,6 +17,10 @@ public class PainterVisualizer : MonoBehaviour
         painter.PointerUpdatedPosition += OnPointerUpdatedPosition;
     }
 
+    /// <summary>
+    /// PointerUpdatedPosition event subscriber that visualizes pointer position/orientation.
+    /// </summary>
+    /// <param name="hit"></param>
     private void OnPointerUpdatedPosition(RaycastHit hit)
     {
         visualizer.transform.position = hit.point;

@@ -354,8 +354,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8313ece5534f14946af397aabc9d646a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  settings: {fileID: 11400000, guid: e519765fc9ee4b947bd7de24791fb09e, type: 2}
   center: {fileID: 772032158}
-  rotationSpeed: 10
 --- !u!108 &963194230
 Light:
   m_ObjectHideFlags: 0

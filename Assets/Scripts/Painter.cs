@@ -5,7 +5,7 @@ using UnityEngine;
 /// Controller that serves as a tool for painting objects with Paintable layer.
 /// </summary>
 [RequireComponent(typeof(Camera))]
-internal sealed class Painter : MonoBehaviour
+public sealed class Painter : MonoBehaviour
 {
     public event Action<RaycastHit> PointerUpdatedPosition; 
     public Settings settings;
@@ -17,8 +17,16 @@ internal sealed class Painter : MonoBehaviour
     {
         camera = GetComponent<Camera>();
     }
-    
+
     private void Update()
+    {
+        Paint();
+    }
+
+    /// <summary>
+    /// Checks collider for monkey mask and colors vertices for respective hit.
+    /// </summary>
+    private void Paint()
     {
         RaycastHit hit;
         Ray ray = this.camera.ScreenPointToRay(Input.mousePosition);
@@ -49,6 +57,10 @@ internal sealed class Painter : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Initializes array for holding colors.
+    /// </summary>
+    /// <param name="mesh">Mesh to get colors count from.</param>
     private void InitializeColors(Mesh mesh)
     {
         colors = new Color32[mesh.vertexCount];
